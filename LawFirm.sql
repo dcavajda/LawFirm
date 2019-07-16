@@ -42,6 +42,7 @@ legal_trainee_id int not null
 
 ALTER TABLE legal_case ADD FOREIGN KEY (lawyer_id) REFERENCES lawyer (lawyer_id);
 ALTER TABLE legal_case ADD FOREIGN KEY (client_id) REFERENCES client (client_id);
+
 ALTER TABLE legal_case_trainee ADD FOREIGN KEY (legal_case_id) REFERENCES legal_case (legal_case_id);
 ALTER TABLE legal_case_trainee ADD FOREIGN KEY (legal_trainee_id) REFERENCES legal_trainee (legal_trainee_id);
 
@@ -66,37 +67,7 @@ VALUES
 INSERT INTO legal_case
 (lawyer_id, client_id, case_date_start, case_date_end)
 VALUES
-(1,1, '1999.05.22', '2000.05.22'),
-(2,2, '2002.06.22', '2000.06.22'),
-(3,3, '2019.01.01');
+(1,1, '1999.05.22', '2000.05.22');
 
-#
-\\
-
-# izlistaj sve pripravnike legal_trainee, koji su radili prosli tjedan od 17.06.2019-21.06.2019 u trenutku poziva 26.06.2019.
-select * from legal_trainee where 
-
-XYZ >='2019-06-17' AND XYZ <'2019-06-21'
-
-
-select * 
-  from mytable 
- where Columnx >= '2010-01-01 00:00:00' 
-       and Columnx < '2011-01-01 00:00:00'
-
-# ne mogu izvršiti zadatak zato što nemam tablicu evidencije radnog vremena za vježbenika
-
-
-# izlistaj sve pripravnike koji su radili na aktivnim predmetima prosli tjedan u tenutku poziva 
-
-select * from legal_trainee where case_date_start >='2019-06-17' AND case_date_end <'2019-06-21'
-
-
-select * 
-  from mytable 
- where Columnx >= '2010-01-01 00:00:00' 
-       and Columnx < '2011-01-01 00:00:00'
-\\
-#
 
 
