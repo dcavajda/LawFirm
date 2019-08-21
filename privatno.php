@@ -9,9 +9,3 @@ include_once "lawfirm1.php";
 
 
 
-
-
-
-
-<a href="odjava.php">Odjava</a>
-

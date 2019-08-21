@@ -15,6 +15,7 @@
                 href="brisanje.php?lawyer_id= <?php echo $red->lawyer_id;?>">
                     <i class="fas fa-trash fa-2x" style="color: red;"></i>
                 </a>
+                
             </div>
         </div>     
     </div>
